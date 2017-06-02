@@ -1,0 +1,15 @@
+$def with (movies)
+<h4>Welcome to</h4>
+<h1>WmLiu's movie site</h1>
+<hr>
+
+<form action="/" method="post">
+	<input type="text" name="title" />
+	<input type="submit" value="Search" />
+</form>
+
+<p>Movie list:</p>
+$for movie in movies:
+	<li>
+	<a href = "movie/$movie['id']">$movie.title>></a>
+	</li>
