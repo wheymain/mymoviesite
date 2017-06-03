@@ -1,0 +1,21 @@
+$def with (movie)
+<h4><a href = "/">Home</a></h4>
+<h1>$movie.title</h1>
+<hr>
+<p>Original_title:$movie.original_title</p>
+<p>URL:<a href = "$movie.url">Link to Douban</a></p>
+<p>Rating:$movie.rating</p>
+<p>Image:<br>
+<img src="$movie.images"></p>
+<p>Directors:$movie.directors</p>
+
+$ casts = movie.casts.split(',')
+<p>Casts:
+$for n in casts:
+    <a href="">$n</a>
+</p>
+
+<p>Year:$movie.year</p>
+<p>Genres:$movie.genres</p>
+<p>Country/Area:$movie.countries</p>
+<p>Abstract:$movie.summary</p>
